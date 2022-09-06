@@ -1,0 +1,100 @@
+class student:
+  def __init__(self, name, ID, Institute):
+    self.name = name
+    self.ID = ID
+    self.Institute = Institute
+
+  def display(self):
+      print(self.name)
+      print(self.ID)
+      print(self.Institute)
+
+p1 = student("salman", 242, "manarat")
+
+p1.display()
+
+==============================================
+class School_student:
+  def __init__(self, Section, Result, District):
+    self.Section = Section
+    self.Result = Result
+    self.District = District
+
+  def display(self):
+      print(self.Section)
+      print(self.Result)
+      print(self.District)
+
+p1 = School_student("commercial", 3.89, "Barishal")
+
+p1.display()
+================================================
+class College_Student:
+  def __init__(self, Section, Result, District):
+    self.Section = Section
+    self.Result = Result
+    self.District = District
+
+  def display(self):
+      print(self.Section)
+      print(self.Result)
+      print(self.District)
+
+p1 = School_student("CSE", 3.66, "DHAKA")
+
+p1.display()
+================================================
+class University_Student:
+  def __init__(self, Semester, Current_CGPA,):
+    self.Semester = Semester,
+    self.Current_CGPA = Current_CGPA
+
+  def display(self):
+      print(self.Semester)
+      print(self.Current_CGPA)
+
+p1 = University_Student( '3rd', 3.11)
+
+p1.display()
+
+
+=====================================================
+class Grade_Calculator:
+    def __init__(self, ID, GPA1, GPA2, GPA3):
+        self.ID = ID
+        self.GPA1 = GPA1
+        self.GPA2 = GPA2
+        self.GPA3 = GPA3
+
+    def Count_CGPA(self):
+        return (self.GPA1 + self.GPA2 + self.GPA3)/3
+
+    def Display(self):
+        print(f"student's ID: {self.ID}")
+        print(f"CGPA: {self.Count_CGPA():.2f}")
+
+p1 = Grade_Calculator(50242, 3.11, 3.16, 2.96)
+cgpa = Grade_Calculator.Count_CGPA()
+
+
+print(f"{cgpa:.2f}")
+p1.display()
+============================================================
+SSC = float(input())
+HSC = float(input())
+marks = SSC+HSC
+
+Waiver = 0.00
+
+if marks >= 9:
+    Waiver = 100
+elif marks >= 8.99:
+    Waiver = 50
+elif marks >= 7.99:
+    Waiver = 25
+
+else:
+    grade = 0.00
+
+
+print(f"Your Waiver = {Waiver}%")
